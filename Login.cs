@@ -25,7 +25,7 @@ namespace CS
 
 
             //Checks if Username and Password are in DB
-            SqlConnection con = new SqlConnection("Data Source = DESKTOP-S8D10J1; Initial Catalog=CS; Integrated Security = True ");
+            SqlConnection con = new SqlConnection("Data Source =.; Initial Catalog=CS; Integrated Security = True ");
             SqlCommand user_search = new SqlCommand("SELECT * FROM Users WHERE username = @Username_Input AND password = @Password_Input", con);
             user_search.Parameters.AddWithValue("@Username_Input", Username_Input);
             user_search.Parameters.AddWithValue("@Password_Input", Password_Input);
