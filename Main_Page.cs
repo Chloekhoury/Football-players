@@ -28,7 +28,7 @@ namespace CS
             int i;
 
 
-            SqlConnection con = new SqlConnection("Data Source = DESKTOP-S8D10J1; Initial Catalog=CS; Integrated Security = True ");
+            SqlConnection con = new SqlConnection("Data Source =.; Initial Catalog=CS; Integrated Security = True ");
             SqlCommand select;
 
             if (checkBox2.Checked == true)
@@ -143,7 +143,7 @@ namespace CS
 
         private string getteam(DataTable resultsdt)
         {
-            SqlConnection con = new SqlConnection("Data Source = DESKTOP-S8D10J1; Initial Catalog=CS; Integrated Security = True ");
+            SqlConnection con = new SqlConnection("Data Source =.; Initial Catalog=CS; Integrated Security = True ");
             SqlCommand selectteam = new SqlCommand("SELECT * FROM Teams WHERE TeamID = @TeamID", con);
             selectteam.Parameters.AddWithValue("@TeamID", resultsdt.Rows[0]["TeamID"]);
             SqlDataAdapter sda = new SqlDataAdapter(selectteam);
@@ -154,7 +154,7 @@ namespace CS
 
         private string getnationality(DataTable resultsdt)
         {
-            SqlConnection con = new SqlConnection("Data Source = DESKTOP-S8D10J1; Initial Catalog=CS; Integrated Security = True ");
+            SqlConnection con = new SqlConnection("Data Source =.; Initial Catalog=CS; Integrated Security = True ");
             SqlCommand selectnat = new SqlCommand("SELECT * FROM Nationalities WHERE NationaltyID = @NationalityID", con);
             selectnat.Parameters.AddWithValue("@NationalityID", resultsdt.Rows[0]["NationalityID"]);
             SqlDataAdapter sda = new SqlDataAdapter(selectnat);
