@@ -42,7 +42,7 @@ namespace CS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection("Data Source = DESKTOP-S8D10J1; Initial Catalog=CS; Integrated Security = True ");
+            SqlConnection con = new SqlConnection("Data Source =.; Initial Catalog=CS; Integrated Security = True ");
             SqlCommand select = new SqlCommand("SELECT * FROM Teams WHERE TeamName = @Team_name", con);
             select.Parameters.AddWithValue("@Team_name", Teamname_text.Text);
             SqlDataAdapter sda = new SqlDataAdapter(select);
